@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Astro Integrations</title>
+    <link rel="stylesheet" href="/src/style.css" />
+    <script type="module" src="/src/main.js"></script>
+  </head>
+  <body class="bg-background text-white min-h-screen">
+    <div x-data="integrations">
+      <!-- Navigation -->
+      <div x-html="navigation"></div>
+
+      <!-- Hero -->
+      <div x-html="hero"></div>
+
+      <!-- Main Content -->
+      <main class="relative z-10">
+        <div class="max-w-7xl mx-auto px-4 pb-16">
+          <div class="flex gap-8">
+            <!-- Sidebar -->
+            <aside x-html="searchFilter"></aside>
+
+            <!-- Integration Grid -->
+            <div x-html="integrationsGrid"></div>
+          </div>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
